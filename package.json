@@ -22,6 +22,7 @@
   "homepage": "https://github.com/joshuaebowling/node-email-service#readme",
   "dependencies": {
     "config": "^1.30.0",
+    "json-socket": "^0.3.0",
     "node-mailer": "^0.1.1"
   }
 }
