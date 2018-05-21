@@ -1,0 +1,27 @@
+{
+  "name": "email-service",
+  "version": "1.0.0",
+  "description": "email service using node mailer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaebowling/node-email-service.git"
+  },
+  "keywords": [
+    "email",
+    "service"
+  ],
+  "author": "josh bowling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuaebowling/node-email-service/issues"
+  },
+  "homepage": "https://github.com/joshuaebowling/node-email-service#readme",
+  "dependencies": {
+    "config": "^1.30.0",
+    "node-mailer": "^0.1.1"
+  }
+}
