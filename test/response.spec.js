@@ -2,10 +2,11 @@ require('should');
 
 describe('response module tests', function() {
   var createResponse;
+
+  // replace this with your own test data
   before(function() {
     // runs before all tests in this block
     createResponse = require('../response');
-    console.log(createResponse);
     createResponse.should.be.a.Function();
   });
 
