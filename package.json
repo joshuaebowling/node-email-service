@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/joshuaebowling/node-email-service#readme",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "config": "^1.30.0",
     "json-socket": "^0.3.0",
     "nodemailer": "^4.6.4"

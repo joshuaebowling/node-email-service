@@ -10,7 +10,7 @@ module.exports = {
     return promise = new Promise((resolve, reject) => {
       try {
         transporter.sendMail(mail, (error, info) => {
-          resolve( {error, info} );
+          resolve(response(error, info));
         });  
       } catch(err) {
         reject(err);
