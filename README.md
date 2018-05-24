@@ -15,8 +15,43 @@ If you're not using a process manager, such as [PM2](https://github.com/Unitech/
 
 ## Client
 Once you have the service installed, create a [link](https://docs.npmjs.com/cli/link) using npm `npm ln {path-to-the-service}` or create a [link](https://yarnpkg.com/lang/en/docs/cli/link/) using yarn `yarn link {path-to-the-service}`
+```
+const emailClient = require('node-email-service').client;
 
-** Its probably best to either use yarn or npm.
+const testData = {
+  transport: {
+    // rackspace
+    host: 'secure.emailsrvr.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: '{your username}',
+      pass: '{your password}'
+    }
+  },
+  from: '{your username}',
+  to: ['destination@example.com'],
+  messages: [
+    {
+      subject: '[[TEST]]',
+      text: '[[TEST]]',
+      html:'<span>[[TEST]]</span>'
+    }
+};
+
+emailClient.sendMessage(testData.transport, testData.from, testData.to[0], testData.messages[0].subject, testData.messages[0].text, testData.messages[0].html)
+  .then(data => { 
+    console.log('success!', data);
+  })
+  .catch(err => {
+    console.log('fail!', err);
+  })
+;
+```
+
+
+
+* Its probably best to either use yarn or npm.
 
 
 ## Logging
